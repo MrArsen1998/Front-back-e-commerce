@@ -30,7 +30,7 @@ git clone https://github.com/MrArsen1998/Front-back-e-commerce.git
 cd backend
 npm install
 ```
-same actions for fronend
+Same actions for frontend
 
 ```
 cd frontend
@@ -67,7 +67,7 @@ For backend:
 ```
 nodemon server.js 
 ```
-For fronend: 
+For frontend: 
 ```
 npm start
 ```
