@@ -63,7 +63,7 @@ Copy it and place in in your .env file
 JWT_SEC="yourrandomlygeneratedsecret"
 PASS_SEC="yourrandomlygeneratedsecret"
 
-Start the application
+### Start the application
 
 For backend: 
 ```
