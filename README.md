@@ -64,6 +64,7 @@ JWT_SEC="yourrandomlygeneratedsecret"
 PASS_SEC="yourrandomlygeneratedsecret"
 
 Start the application
+
 For backend: 
 ```
 nodemon server.js 
