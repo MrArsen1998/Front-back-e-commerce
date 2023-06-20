@@ -68,7 +68,7 @@ const Navbar = () => {
             </Left>
             <Center>
                 <Logo>
-                <Link to = "/" style={{ textDecoration: 'none' }}> ARSEN </Link>
+                <Link to = "/" style={{ textDecoration: 'none' }}> Accessories </Link>
                 </Logo>
             </Center>
             <Right>
