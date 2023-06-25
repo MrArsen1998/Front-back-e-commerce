@@ -20,8 +20,6 @@ This project was built to help you start Full Stack E-Commerce Web App with a bo
 * User registration and login
 * Authentication via JWT
 * CRUD for adding products to e-commerce app
-* MongoDB database
-* Newsletter subscription
 
 ### Installing
 
