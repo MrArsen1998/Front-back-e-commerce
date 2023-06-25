@@ -88,8 +88,16 @@ const Navbar = () => {
   const renderAuthButtons = () => {
     if (decodedToken) {
       return (
-        <>
-          <MenuItem>{decodedToken.username}</MenuItem>
+        <>{decodedToken.username === 'admin' ? (
+          <Link to="/admin" style={{ textDecoration: 'none' }}>
+            <MenuItem>{decodedToken.username}</MenuItem>
+          </Link>
+        ) : (
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <MenuItem>{decodedToken.username}</MenuItem>
+          </Link>
+        )}
+        
           <MenuItem onClick={handleSignOut}>Sign Out</MenuItem>
         </>
       );

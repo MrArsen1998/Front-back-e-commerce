@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import styled from 'styled-components';
-
+import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -12,6 +12,17 @@ const Title = styled.h1`
   font-size: 24px;
   margin-bottom: 10px;
 `;
+const HomeButton = styled.button`
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px; 
+`
 
 const Table = styled.table`
   width: 100%;
@@ -88,6 +99,7 @@ const ProductTable = () => {
         category: '',
         gender: '',
     });
+    const navigate = useNavigate();
     const [editingProduct, setEditingProduct] = useState(null);
     useEffect(() => {
         axios.get('http://localhost:5000/api/products')
@@ -170,6 +182,7 @@ const ProductTable = () => {
                             product._id === data._id ? data : product
                         )
                     );
+                    
                     setEditingProduct(null);
                     setNewProduct({ title: '', price: '', category: '', desc: '', gender: '', image: '' });
                 }
@@ -180,13 +193,15 @@ const ProductTable = () => {
             });
     };
 
-
+    const handleHomeButton = () =>{
+        navigate('/');
+    }
 
 
   return (
     <Wrapper>
       <Title>Product Table</Title>
-
+        <HomeButton onClick={handleHomeButton}>Back to Main page</HomeButton>
       <Table>
         <TableHead>
           <TableRow>
