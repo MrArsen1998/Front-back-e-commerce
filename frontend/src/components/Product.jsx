@@ -2,6 +2,7 @@ import styled from "styled-components"
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { Link } from "react-router-dom";
 
 const Info = styled.div`
     opacity: 0;
@@ -54,14 +55,16 @@ const Icon = styled.div`
 const Product = ({item}) => {
   return (
     <Container>
-        <Image src = {item.img}/>
+        <Image src = {item.image}/>
         <Info>
             <Icon>
                 <ShoppingCartOutlinedIcon/>
             </Icon>
+            <Link to={`/product/${item._id}`} style={{ textDecoration: 'none' }}>
             <Icon>
                 <SearchIcon/>
             </Icon>
+            </Link>
             <Icon>
                 <FavoriteBorderIcon/>
             </Icon>

@@ -100,9 +100,11 @@ const Slider = () => {
             <InfoContainer>
                 <Title>{item.title}</Title>
                 <Desc>{item.desc}</Desc>
+                <Link to = "/products" style={{ textDecoration: 'none' }}>
                 <Button>
-                <Link to = "/products" style={{ textDecoration: 'none' }}> SHOP NOW </Link>
+                 SHOP NOW 
                 </Button>
+                </Link>
             </InfoContainer>
             </Slide>
         ))}
